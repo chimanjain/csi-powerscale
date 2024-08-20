@@ -12,7 +12,7 @@ jobs:
       - name: Checkout the code
         uses: actions/checkout@v4
       - name: Run the formatter, linter, and vetter
-        uses: dell/common-github-actions/go-code-formatter-linter-vetter@main
+        uses: dell/common-github-actions/go-code-formatter-linter-vetter@update-github-actions
         with:
           directories: ./...
   go_security_scan:
@@ -22,7 +22,7 @@ jobs:
       - name: Checkout the code
         uses: actions/checkout@v4
       - name: Run gosec to check for security vulnerabilities
-        uses: dell/common-github-actions/gosec-runner@main
+        uses: dell/common-github-actions/gosec-runner@update-github-actions
         with:
           directories: "./..."
   malware_security_scan:
@@ -32,7 +32,7 @@ jobs:
       - name: Checkout the code
         uses: actions/checkout@v4
       - name: Run malware scan
-        uses: dell/common-github-actions/malware-scanner@main
+        uses: dell/common-github-actions/malware-scanner@update-github-actions
         with:
           directories: .
           options: -ri
